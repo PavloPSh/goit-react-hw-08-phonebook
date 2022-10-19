@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { FormPhonebook } from "components/FormPhonebook/FormPhonebook";
+import { FormPhonebook } from "components/ContactForm/ContactsForm";
 
 
 
