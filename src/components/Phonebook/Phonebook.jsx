@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { FormPhonebook } from "components/ContactForm/ContactsForm";
+import { ContactForm } from "components/ContactForm/ContactsForm";
 
 
 
@@ -27,7 +27,7 @@ export class PhoneBook extends Component {
             <div>
                 <h2>Phonebook</h2>
 
-                <FormPhonebook onSubmit={ this.addContact } />
+                <ContactForm onSubmit={ this.addContact } />
 
                 
 
