@@ -23,7 +23,7 @@ export class ContactForm extends Component {
         e.preventDefault();
         const { name, number } = this.state;
         
-        this.props.onSubmit({name,number})
+        this.props.onAddContact({name,number})
         this.setState({
             name: '',
             number:'',
@@ -71,5 +71,5 @@ export class ContactForm extends Component {
 
 
 ContactForm.propTypes = {
-    addContact: PropTypes.func.isRequired,
+    onAddContact: PropTypes.func.isRequired,
 }
