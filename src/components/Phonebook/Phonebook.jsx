@@ -5,6 +5,8 @@ import { Filter } from "components/Filter/Filter";
 
 import { nanoid } from "nanoid";
 
+import { Box } from "Box";
+
 
 
 export class PhoneBook extends Component {
@@ -83,11 +85,11 @@ export class PhoneBook extends Component {
 
         return (
             <div>
-                <h2>Phonebook</h2>
+                <Box as="h2" p="16px" display="flex" justifyContent='center'>Phonebook</Box>
 
                 <ContactForm onAddContact={ addContact } />
 
-                <h2>Contacts</h2>
+                <Box as="h2" p="16px" display="flex" justifyContent='center'>Contacts</Box>
 
                 <Filter value={filter} onChange={ handleChange } />
 

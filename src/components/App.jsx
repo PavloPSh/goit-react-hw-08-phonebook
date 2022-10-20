@@ -1,10 +1,14 @@
 import { PhoneBook } from "./Phonebook/Phonebook";
 
+import { GlobalStyle } from "./GlobalStyles";
+import { Box } from "Box";
+
 
 export const App = () => {
   return (
-    <div>
+    <Box p='24px' display="flex" justifyContent='center'>
       <PhoneBook />
-    </div>
+      <GlobalStyle />
+    </Box>
   );
 };
