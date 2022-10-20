@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ContactItem } from "components/ContactItem/ContactItem"
 
 export const ContactList = ({ contacts, removeContact }) => {
@@ -7,4 +8,10 @@ export const ContactList = ({ contacts, removeContact }) => {
                 <ContactItem key={contact.id} contacts={contact} onClick={removeContact} />)}
         </ul>
     )
+}
+
+
+ContactList.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
+    onClick: PropTypes.func,
 }
