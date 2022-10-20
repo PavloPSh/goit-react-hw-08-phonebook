@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { ContactForm } from "components/ContactForm/ContactsForm";
 import { ContactList } from "components/ContactList/ContactList";
+import { Filter } from "components/Filter/Filter";
 
 import { nanoid } from "nanoid";
 
@@ -88,7 +89,7 @@ export class PhoneBook extends Component {
 
                 <h2>Contacts</h2>
 
-                <input type="text" name="filter" value={filter} onChange={ handleChange } />
+                <Filter value={filter} onChange={ handleChange } />
 
                 <ContactList contacts={contacts} removeContact={ removeContact } />
             </div>
