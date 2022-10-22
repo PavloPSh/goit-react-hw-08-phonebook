@@ -21,6 +21,23 @@ export class PhoneBook extends Component {
         filter: '',
     }
 
+    componentDidMount() {
+        const contacts = JSON.parse(localStorage.getItem('contacts'));
+        if (contacts?.length) {
+          this.setState({
+            contacts,
+            })  
+        }  
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        const { contacts } = this.state;
+        if (prevState.contacts !== contacts) {
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+        }
+        
+    }
+
 
     addContact = (contact) => {
         if (this.isAlreadyAdd(contact)) {
@@ -70,9 +87,9 @@ export class PhoneBook extends Component {
         return filteredContacts;
     }
 
-    isAlreadyAdd ({name,number}) {
+    isAlreadyAdd ({name}) {
         const { contacts } = this.state;
-        const result = contacts.find((contact) => contact.name === name && contact.number === number);
+        const result = contacts.find((contact) => contact.name.toLocaleLowerCase() === name.toLocaleLowerCase());
         return result;
     }
 
