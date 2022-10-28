@@ -8,8 +8,6 @@ export const theme = {
     secondary: '#05a',
     accent: '#609',
     muted: '#f6f6f6',
-    success: '#00D678',
-    error: '#ff0000',
     mainBg: '#f7f7f7',
     
   },
