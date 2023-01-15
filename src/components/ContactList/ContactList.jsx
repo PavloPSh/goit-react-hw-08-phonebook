@@ -1,17 +1,30 @@
-import PropTypes from 'prop-types';
-import { ContactItem } from "components/ContactItem/ContactItem"
+import { ContactItem } from "components/ContactItem/ContactItem";
 
-export const ContactList = ({ contacts, removeContact }) => {
+import { useSelector } from 'react-redux';
+
+export const ContactList = () => {
+
+    const contacts = useSelector(state => state.contacts.contacts);
+    const filter = useSelector(state => state.filter);
+    // console.log(contacts)
+    const getFilteredContacts = () => {
+
+        if (!filter) {
+            return contacts;
+        };
+
+        return contacts.filter(({name}) => name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
+    };
+
+    const filteredContacts = getFilteredContacts();
+
     return (
         <ul>
-            {contacts.map(contact => 
-                <ContactItem key={contact.id} contacts={contact} onClick={removeContact} />)}
+            {filteredContacts.map(contact => 
+                <ContactItem key={contact.id} contacts={contact}  />)}
         </ul>
     )
 }
 
 
-ContactList.propTypes = {
-    contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
-    onClick: PropTypes.func,
-}
+
