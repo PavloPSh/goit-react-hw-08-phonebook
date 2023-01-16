@@ -6,7 +6,7 @@ export const ContactList = () => {
 
     const contacts = useSelector(state => state.contacts.contacts);
     const filter = useSelector(state => state.filter);
-    console.log(contacts);
+    // console.log(contacts);
     const getFilteredContacts = () => {
 
         if (!filter) {
