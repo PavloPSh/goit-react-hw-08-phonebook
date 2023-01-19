@@ -4,7 +4,9 @@ import { nanoid } from "nanoid";
 import { Form, FormItem } from "./ContactForm.styled";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "redux/contactsSlice";
+// import { addContact } from "redux/contactsSlice";
+import { getContacts } from "redux/contactsSlice";
+import { addContacts } from "redux/operations";
 
 
 
@@ -14,7 +16,7 @@ export const ContactForm = () => {
     const [number, setNumber] = useState('');
 
     const dispatch = useDispatch();
-    const contacts = useSelector(state => state.contacts.contacts);
+    const contacts = useSelector(getContacts);
     
 
     const handleChange = (e) => {
@@ -40,7 +42,7 @@ export const ContactForm = () => {
             return alert(`${name} is already add`);
         };
 
-        dispatch(addContact({ name, number }));
+        dispatch(addContacts({ name, number }));
 
         setName('');
         setNumber('');
