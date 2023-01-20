@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Item = styled.li`
     margin-top: ${props => props.theme.space[3]}px;
     display: flex;
-    gap: ${props => props.theme.space[5]}px;
+    justify-content: space-between;
     & button{
         background-color: ${props => props.theme.colors.white};
         border: ${props => props.theme.borders.card};

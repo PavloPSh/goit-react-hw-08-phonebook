@@ -2,9 +2,10 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 
 import { Form, FormItem } from "./ContactForm.styled";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { useDispatch, useSelector } from "react-redux";
-// import { addContact } from "redux/contactsSlice";
 import { getContacts } from "redux/contactsSlice";
 import { addContacts } from "redux/operations";
 
@@ -39,7 +40,7 @@ export const ContactForm = () => {
 
 
         if (isAlreadyAdd(name)) {
-            return alert(`${name} is already add`);
+            return toast.error(`${name} is already add`);
         };
 
         dispatch(addContacts({ name, number }));

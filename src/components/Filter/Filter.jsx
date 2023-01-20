@@ -17,7 +17,7 @@ export const Filter = () => {
         const { value } = e.target;
         dispatch(addFilter(value));
     };
-    // console.log(filter)
+    
     return (
         
         <FilterItem htmlFor={filterId}>

@@ -19,7 +19,7 @@ export const FormItem = styled.label`
     display: flex;
     justify-content: space-between;
     & input{
-        width: 200px;
+        width: 380px;
         border-top: none;
         border-left: none;
         border-right: none;
