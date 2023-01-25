@@ -25,7 +25,7 @@ export const ContactList = () => {
 
         return contacts.filter(({ name }) => name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()));
     };
-
+    
     const filteredContacts = getFilteredContacts();
     
     return (
