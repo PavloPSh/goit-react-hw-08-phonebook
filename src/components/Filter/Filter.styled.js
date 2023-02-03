@@ -4,7 +4,7 @@ export const FilterItem = styled.label`
     display: flex;
     flex-direction: column;
     & input{
-        width: 200px;
+        width: 209px;
         border-top: none;
         border-left: none;
         border-right: none;

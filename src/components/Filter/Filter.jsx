@@ -19,7 +19,7 @@ export const Filter = () => {
     };
     
     return (
-        
+        <>
         <FilterItem htmlFor={filterId}>
             Find contact by name:
             <input
@@ -29,7 +29,7 @@ export const Filter = () => {
                 value={filter}
                 onChange={handleChange} />
         </FilterItem>
-        
+        </>
     )
 };
 
