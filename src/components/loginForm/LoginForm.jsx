@@ -16,7 +16,6 @@ export const LoginForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.currentTarget;
-        console.log(form)
         dispatch(
             login({
                 email: form.elements.email.value,

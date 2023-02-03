@@ -2,13 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { ToastContainer } from "react-toastify";
-
-import { Layout } from "./layout/Layout";
-// import PhoneBook from "./Phonebook/Phonebook";
-// import LoginPage from "pages/login/LoginPage";
-// import RegisterPage from "pages/register/RegisterPage";
-
-
+import 'react-toastify/dist/ReactToastify.css';
 
 import { RestrictedRoute } from "routes/RestrictedRoute";
 import { PrivatRoute } from "routes/PrivateRoute";
@@ -19,8 +13,9 @@ import { GlobalStyle } from "./GlobalStyles";
 import { Box } from "Box";
 import { useEffect } from "react";
 import { refreshUser } from "redux/auth/authOperations";
-import { lazy } from "react";
 
+import { lazy } from "react";
+import { Layout } from "./layout/Layout";
 const HomePage = lazy(() => import('pages/home/HomePage'));
 const RegisterPage = lazy(() => import('pages/register/RegisterPage'));
 const LoginPage = lazy(() => import('pages/login/LoginPage'));
