@@ -1,5 +1,5 @@
 import { Box } from "Box";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 import { StyledNavLink } from "components/navigation/NavBar.styled";
 

@@ -1,6 +1,6 @@
 import { AuthBar } from "components/authBar/AuthBar";
 import { UserMenu } from "components/userMenu/UserMenu";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { useAuth } from "hooks";
 import { Box } from "Box";
 
